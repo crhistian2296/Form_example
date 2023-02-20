@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+    <title>Instagram feed</title>
+    <!-- Fontawesome -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    />
+    <title>Form Layout</title>
+  </head>
+
+  <body>
+    <div class="container p-5">
+      <div class="card">
+        <div class="card-header">
+          <h2>Payment form example</h2>
+        </div>
+        <div class="card-body">
+          <form id="payForm" class="row g-3">
+            <div class="alert alert-danger" role="alert">
+              Some fields are missing
+            </div>
+            <div class="col-md-6">
+              <label for="cardNumber" class="form-label">Card #</label>
+              <input
+                type="password"
+                class="form-control"
+                id="cardNumber"
+                placeholder="XXXXXXXXXXXXXXXX"
+                required
+                name="cardNumber"
+              />
+            </div>
+            <div class="col-md-2">
+              <label for="secretNumber" class="form-label">CVC #</label>
+              <input
+                type="number"
+                class="form-control"
+                id="secretNumber"
+                placeholder="0000"
+                required
+                name="secretNumber"
+              />
+            </div>
+            <div class="col-md-4 d-inline">
+              <label for="amount" class="form-label">Amount</label><br />
+              <input
+                type="number"
+                class="form-control"
+                id="amount"
+                placeholder="$"
+                required
+                name="amount"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="firstName" class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="firstName"
+                required
+                name="firstName"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="lastName" class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                id="lastName"
+                required
+                name="lastName"
+              />
+            </div>
+            <div class="col-md-6">
+              <label for="city" class="form-label">City</label>
+              <input
+                type="text"
+                class="form-control"
+                id="city"
+                required
+                name="city"
+              />
+            </div>
+            <div class="col-md-3">
+              <label for="state" class="form-label">State</label>
+              <select id="state" class="form-select" required name="state">
+                <option selected>Pick a state</option>
+                <option>...</option>
+              </select>
+            </div>
+            <div class="col-md-3">
+              <label for="postalCode" class="form-label">Postal Code</label>
+              <input
+                type="text"
+                class="form-control"
+                id="postalCode"
+                required
+                name="postalCode"
+              />
+            </div>
+            <div class="col-6">
+              We accept:
+              <div class="container">
+                <div
+                  class="row bg-secondary text-white p-2 rounded d-flex w-50"
+                >
+                  <div class="col-sm-3">
+                    <div class="form-check" name="pay">
+                      <input
+                        class="form-check-input"
+                        name="payOption"
+                        value="masterCard"
+                        type="radio"
+                        id="masterCard"
+                        required
+                      />
+                      <label class="form-check-label" for="masterCard"
+                        ><i class="fa-brands fa-cc-mastercard"></i
+                      ></label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        name="payOption"
+                        value="visa"
+                        type="radio"
+                        id="visa"
+                        required
+                      />
+                      <label class="form-check-label" for="visa"
+                        ><i class="fa-brands fa-cc-visa"></i
+                      ></label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-check form-check-inline">
+                      <input
+                        class="form-check-input"
+                        name="payOption"
+                        value="dinersClub"
+                        type="radio"
+                        id="dinersClub"
+                        required
+                      />
+                      <label class="form-check-label" for="dinersClub"
+                        ><i class="fa-brands fa-cc-diners-club"></i
+                      ></label>
+                    </div>
+                  </div>
+                  <div class="col-sm-3">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        name="payOption"
+                        value="americanExpress"
+                        type="radio"
+                        id="americanExpress"
+                        required
+                      />
+                      <label class="form-check-label" for="americanExpress"
+                        ><i class="fa-brands fa-cc-amex"></i
+                      ></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-6">
+              Message
+              <div class="form-floating mt-1">
+                <textarea
+                  class="form-control"
+                  placeholder="Leave a comment here"
+                  id="floatingTextarea2"
+                  style="height: 100px"
+                  name="aditionalNotes"
+                ></textarea>
+              </div>
+              <div class="text-secondary">Add any notes here.</div>
+            </div>
+          </form>
+        </div>
+        <div class="card-footer">
+          <div class="container d-flex align-items-center justify-content-end">
+            <button class="btn btn-secondary mx-2">Cancel</button>
+            <button form="payForm" type="submit" class="btn btn-primary">
+              Send
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
